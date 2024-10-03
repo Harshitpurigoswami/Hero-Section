@@ -1,0 +1,20 @@
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container-wrapper {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .container-wrapper {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container-wrapper {
+    max-width: 720px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container-wrapper {
+    max-width: 540px;
+  }
+}/*# sourceMappingURL=responsive.css.map */
