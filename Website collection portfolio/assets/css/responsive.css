@@ -7,14 +7,24 @@
   .container-wrapper {
     max-width: 960px;
   }
+  html {
+    font-size: 12.93px;
+  }
+  .hero-sec {
+    gap: 2.3125rem;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container-wrapper {
-    max-width: 720px;
+    max-width: 100%;
+    padding: 0 24px;
   }
 }
 @media screen and (max-width: 767px) {
-  .container-wrapper {
-    max-width: 540px;
+  header .desktop-header {
+    display: none;
+  }
+  header .mobile-header {
+    display: block;
   }
 }/*# sourceMappingURL=responsive.css.map */

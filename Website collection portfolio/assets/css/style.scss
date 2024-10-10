@@ -1,36 +1,194 @@
-*{
+@import 'font';
+@import 'variables';
+@import 'functions';
+@import 'grouping';
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html,body{
-    height: 100%;
+html,
+body { 
     width: 100%;
 }
 
-body{
-    background: #1a1a1a;
+a {
+    text-decoration: none;
 }
 
-.container-wrapper{
+ul,
+ol {
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background: url(../img/background-img.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.container-wrapper {
     max-width: 1320px;
     margin: auto;
 }
 
+// 
+.bg-left-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.bg-right-line{
+    position: absolute;
+    right: size(45);
+    top: 0;
+    height: 100%;
+}
+// 
 
 // *** Header Start ***
-header{
-    min-height: 100px;
+header {
     border-bottom: 1px solid white;
-    .header-main-wrapper{
+    backdrop-filter: blur(10px);
+    .header-main-wrapper {
+        min-height: 100px;
         display: flex;
-        .header-left-sec{
-            .menu-button{
+        justify-content: space-between;
+        align-items: center;
+
+        .header-left-sec {
+            display: flex;
+            align-content: center;
+
+            .menu-button {
+                min-height: 100px;
                 display: flex;
                 gap: 12px;
+                align-items: center;
+                border-right: 1px solid $white-color;
+                margin-right: 24px;
+                padding-right: size(42);
+             
+            }
+            a {
+                color: $white-color;
+                @include nav-text;
+            }
+            
+
+            .social-links {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+
+                a {
+                    font-size: size(24); // 24px in rem 
+                }
+            }
+        }
+        .header-right-sec{
+            ul{
+                display: flex;
+                align-items: center;
+                gap: size(48);
+                li{
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        height: 100px;
+                        width: 1px;
+                        background-color: $white-color;
+                        top: 50%;
+                        right: size(-24);
+                        transform: translateY(-50%);
+                    }
+                    &:last-child{
+                        &::after{
+                            content: unset;
+                        }
+                    }
+                }
+                a{
+                    @include nav-text;
+                    color: $white-color;
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                 
+                }
             }
         }
     }
+    .mobile-header{
+        display: none;
+    }
 }
+
 // *** Header End ***
+
+
+// Hero Section Start
+.hero-sec{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 42px 0;
+    gap: size(53);
+    .hero-content-sec{
+        max-width: size(780);
+        .sub-heading{
+            @include heading-2;
+            color: $primary-color;
+            margin-bottom: 24px;
+        }
+        .heading-1{
+            @include heading-1;
+            color: $white-color;
+            margin-bottom: 24px;
+        }
+        .para{
+            @include para;
+            color: $white-color;
+            margin-bottom: 24px;
+        }
+        .btn{
+            @include btn;
+            margin-bottom: size(42);
+        }
+        .gallery-sec{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            li{
+                position: relative;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: size(239);
+                    height: size(239);
+                    bottom: -80px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: url(../img/gallery-bg-linear.svg) no-repeat center;
+                    background-size: contain;
+                    z-index: -1;
+                }
+            }
+     
+        }
+    }
+    .hero-img-sec{
+        max-width: size(517.7);
+        width: 100%;
+        flex-shrink: 0;
+    }
+}
+// Hero Section End

@@ -1,0 +1,46 @@
+@mixin nav-text{
+    font-size: size(18);
+    font-family: $Inria-font;
+    font-weight: 400;
+    line-height: 1;
+    font-style: normal;
+}
+
+
+@mixin heading-1{
+    font-size: size(52);
+    font-family: $Rye-font;
+    font-weight: 400;
+    // line-height: 1;
+    font-style: normal;
+}
+
+@mixin heading-2{
+    font-size: size(24);
+    font-family: $Sedan-font;
+    font-weight: 400;
+    line-height: 1;
+    font-style: normal;
+}
+
+@mixin para{
+    font-size: size(18);
+    font-family: $Domine-font;
+    font-weight: bold;
+    line-height: size(36);
+    font-style: normal;
+}
+
+@mixin btn{
+    display: inline-block;
+    font-size: size(18);
+    font-family: $Alice-font;
+    font-weight: 400;
+    line-height: 1;
+    font-style: normal;
+    color: $white-color;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border: 1px solid $white-color;
+    background: $secondary-color;
+}

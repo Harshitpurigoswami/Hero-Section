@@ -14,13 +14,24 @@
     .container-wrapper{
         max-width: 960px;
     }
+    html{
+        font-size: 12.93px;
+    }
+    .hero-sec { 
+        gap: 2.3125rem;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     // *** Tablet Responsive ***
     .container-wrapper{
-        max-width: 720px;
-    }
+        // max-width: 720px;
+        max-width: 100%;
+        padding: 0 24px;
+    } 
+
+
+
 }
 
 
@@ -28,6 +39,17 @@
 @media screen and (max-width: 767px) {
     // *** Mobile Responsive ***
     .container-wrapper{
-        max-width: 540px;
+        // max-width: 540px;
     }
+
+        // Header Start 
+        header{
+            .desktop-header{
+                display: none;
+            }
+            .mobile-header{
+                display: block;
+            }
+        }
+        // Header End
 }

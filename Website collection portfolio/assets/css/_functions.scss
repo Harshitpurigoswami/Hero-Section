@@ -1,0 +1,4 @@
+// This function is use to convert a px to rem value.
+@function size($value){
+    @return ($value * 0.0625rem);
+}
